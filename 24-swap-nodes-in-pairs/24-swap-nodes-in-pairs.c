@@ -17,7 +17,7 @@ struct ListNode* swapPairs(struct ListNode* head){
         return head;
     }
     struct ListNode *next = head->next;
-    struct ListBode *temp = head->next->next;
+    struct ListNode *temp = head->next->next;
     next->next = head;
     head->next = swapPairs(temp);
     
