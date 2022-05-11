@@ -11,10 +11,9 @@ int climbStairs(int n){
     array[0] = 0;
     array[1] = 1;
     array[2] = 2;
-    array[3] = 3;
-    array[4] = 5;
     
-    for (int i = 5; i <= n; i++){
+    
+    for (int i = 3; i <= n; i++){
         array[i] = array[i-1] + array[i-2];
     }
     
