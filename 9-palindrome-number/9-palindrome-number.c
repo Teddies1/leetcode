@@ -15,7 +15,6 @@ bool isPalindrome(int x){
     int temp = x;
     int res = 0;
     int num = 0;
-    int i = 1;
     
     while(temp){
         num = temp % 10;
