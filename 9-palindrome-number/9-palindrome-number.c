@@ -13,24 +13,24 @@ bool isPalindrome(int x){
     }
     int count = 0;
     int temp = x;
-    int res = 0;
+    long long res = 0;
     int num = 0;
     
-    while(temp){
+    /*while(temp){
         num = temp % 10;
         count++;
         temp /= 10;
     }
-    temp = x;
-    while(count){
+    temp = x;*/
+    
+    while(temp){
         num = temp % 10;
-        res += num * pow(10, count-1);  
-        count--;
+        res += num;
+        res *= 10;
         temp /= 10;
     }
-    if (res == x){
-        return true;
-    }
+    res /= 10;
     
-    return false;
+    
+    return (res == x);
 }
