@@ -18,15 +18,5 @@ int maxProfit(int* prices, int pricesSize){
     }
     
     return max; 
-    
-    /*
-    min = 7
-    min = 1, profit = 0, max = 0;
-    min = 1, profit = 4, max = 4;
-    min = 1, profit = 2, max = 4;
-    min = 1, profit = 5, max = 5;
-    min = 1, profit = 3, max = 5;
-    */
-    
-    
+     
 }
