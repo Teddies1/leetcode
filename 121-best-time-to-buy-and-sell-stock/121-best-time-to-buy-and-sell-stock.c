@@ -15,6 +15,10 @@ int maxProfit(int* prices, int pricesSize){
         profit = prices[i] - min;
         max = maximum(profit, max);
     }
+    
+    
+    
+    
     return max; 
      
 }
