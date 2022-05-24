@@ -16,6 +16,5 @@ int helper(int start, int end, int target, int* array){
 }
 
 int search(int* nums, int numsSize, int target){
-    
     return helper(0,numsSize-1,target,nums);
 }
