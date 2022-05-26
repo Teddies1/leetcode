@@ -1,15 +1,8 @@
-
+#include <stdio.h>
+#include <math.h>
 
 bool isPowerOfTwo(int n){
-    /*
-    1
-    10
-    100
-    1000
-    10000
-    */
-    
-    long count = 0;
+    int count = 0;
     if (n < 0){
         return false;
     }
@@ -23,6 +16,10 @@ bool isPowerOfTwo(int n){
         return true;
     }
     else{
+        return false;
+    }
+    
+    if (n < 0){
         return false;
     }
     
