@@ -24,20 +24,12 @@ int firstBadVersion(int n) {
         //if middle call is false, it means the 1st bad version is to the right
         //if middle call is true, it means the 1st bad version is to the left
         if(isBadVersion(mid) == false){
-            /*
-            if mid is false, left version is false, right version is true,
-            then the right version is the first bad version;
-            */
             if (isBadVersion(mid+1) == true && isBadVersion(mid-1) == false){
                 return mid+1;
             }
             lower = mid+1;
         }
         else{
-            /*
-            if mid is true, left version is false, right version is true,
-            then the mid version is the first bad one.
-            */
             if (isBadVersion(mid+1) == true && isBadVersion(mid-1) == false){
                 return mid;
             }
