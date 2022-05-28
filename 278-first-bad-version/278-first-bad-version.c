@@ -36,7 +36,7 @@ int firstBadVersion(int n) {
         else{
             /*
             if mid is true, left version is false, right version is true,
-            then the mid version is the first bad one
+            then the mid version is the first bad one.
             */
             if (isBadVersion(mid+1) == true && isBadVersion(mid-1) == false){
                 return mid;
