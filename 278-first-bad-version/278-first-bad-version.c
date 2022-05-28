@@ -6,7 +6,7 @@ int firstBadVersion(int n) {
         return isBadVersion(1);
     }
     /*
-    // inefficient o(n) method
+    // inefficient o(n) method, always TLE except one lucky acceptance
     for (int i = n; i >= 0; i--){
         if (isBadVersion(i-1) == false){
             return i;
