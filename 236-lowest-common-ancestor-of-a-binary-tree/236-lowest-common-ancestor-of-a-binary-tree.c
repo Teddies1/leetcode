@@ -21,7 +21,7 @@ struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p,
     if (left != NULL && right != NULL){
         return root;
     }
-    if(left == NULL){
+    else if(left == NULL){
         return right;
     }
     return left;
