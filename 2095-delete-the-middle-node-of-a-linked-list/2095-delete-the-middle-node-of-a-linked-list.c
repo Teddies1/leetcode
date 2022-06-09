@@ -18,10 +18,7 @@ struct ListNode* locatepre(struct ListNode *head){
     return head;
 }
 struct ListNode* deleteMiddle(struct ListNode* head){
-    if (head == NULL){
-        return NULL;
-    }
-    if(head->next == NULL){
+    if(head->next == NULL || head == NULL){
         return NULL;
     }
     
