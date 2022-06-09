@@ -3,7 +3,7 @@ int max(int a, int b){
     return a > b ? a : b;
 }
 int maxSubArray(int* nums, int numsSize){
-    int newsum = INT_MIN;
+    int newsum = 0x80000000;
     int currentsum = 0;
     if (numsSize == 1){
         return nums[0];
@@ -22,7 +22,6 @@ int maxSubArray(int* nums, int numsSize){
         
     for (int i = 0; i < numsSize; i++){
         currentsum += nums[i];
-        
         newsum = max(newsum, currentsum);
         currentsum = max(currentsum, 0);
     }
