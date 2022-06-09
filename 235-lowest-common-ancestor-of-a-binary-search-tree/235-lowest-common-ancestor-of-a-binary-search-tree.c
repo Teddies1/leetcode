@@ -20,5 +20,5 @@ struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p,
         return lowestCommonAncestor(root->right, p, q);
 
     }
-    return root;
+    else return root;
 }
