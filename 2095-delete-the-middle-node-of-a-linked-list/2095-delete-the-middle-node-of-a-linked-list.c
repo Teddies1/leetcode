@@ -6,7 +6,6 @@
  * };
  */
 struct ListNode* locatepre(struct ListNode *head){
-    /*
     int count = 0;
     struct ListNode* temp = head;
     while(temp != NULL){
@@ -15,21 +14,8 @@ struct ListNode* locatepre(struct ListNode *head){
     }
     for (int i = 0; i < (count/2)-1; i++){
         head = head->next;
-    }
+    } 
     return head;
-    */
-    
-    struct ListNode* pre;
-    struct ListNode* slow = head;
-    struct ListNode* fast = head;
-    
-    while (fast != NULL && fast->next != NULL){
-        pre = slow;
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    
-    return pre;
 }
 struct ListNode* deleteMiddle(struct ListNode* head){
     if(head->next == NULL || head == NULL){
