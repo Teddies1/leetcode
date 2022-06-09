@@ -27,9 +27,7 @@ bool isBalanced(struct TreeNode* root){
     int left = height(root->left);
     int right = height(root->right);
     
-    int diff = left-right;
-    
-    if (diff > 1 || diff < -1){
+    if (left-right > 1 || left-right < -1){
         return false;
     }
     if (isBalanced(root->right) == false || isBalanced(root->left) == false){
