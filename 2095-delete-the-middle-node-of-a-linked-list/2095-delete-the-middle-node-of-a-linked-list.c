@@ -28,6 +28,7 @@ struct ListNode* locatepre(struct ListNode *head){
         slow = slow->next;
         fast = fast->next->next;
     }
+    
     return pre;
 }
 struct ListNode* deleteMiddle(struct ListNode* head){
