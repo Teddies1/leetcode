@@ -11,11 +11,8 @@
 bool isSameTree(struct TreeNode* p, struct TreeNode* q){
     if (p == NULL && q == NULL) {
         return true;
-    }if (q == NULL || p == NULL){
-        return false;
     }
-    
-    if (q->val != p->val){
+    if (q == NULL || p == NULL || q->val != p->val){
         return false;
     }
     bool left = isSameTree(p->left, q->left);
