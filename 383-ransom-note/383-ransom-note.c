@@ -9,7 +9,6 @@ bool canConstruct(char * ransomNote, char * magazine){
         mag[letter]++;
         i++;
     }
-    
     while (ransomNote[j] != '\0'){
         ransom = ransomNote[j] - 97;
         if (mag[ransom] == 0){
