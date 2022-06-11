@@ -7,7 +7,6 @@ bool canConstruct(char * ransomNote, char * magazine){
     while (magazine[i] != '\0'){
         letter = magazine[i] - 97;
         mag[letter]++;
-        printf("%d", mag[letter]);
         i++;
     }
     while (ransomNote[j] != '\0'){
@@ -17,10 +16,7 @@ bool canConstruct(char * ransomNote, char * magazine){
         }
         if (mag[ransom] > 0){
             mag[ransom]--;
-        }
-        printf("%d", mag[ransom]);
-
-        
+        }   
         j++;
     }
     
