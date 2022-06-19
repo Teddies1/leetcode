@@ -34,8 +34,5 @@ int search(int* nums, int numsSize, int target){
             end = mid - 1;
         }
     }
-    
-    return -1;
-    
-    
+    return -1;   
 }
