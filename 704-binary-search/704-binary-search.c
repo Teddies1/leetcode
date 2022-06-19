@@ -1,3 +1,6 @@
+
+
+//RECURSIVE VERSION
 /*
 int helper(int start, int end, int target, int* array){
     if (start > end){
@@ -15,10 +18,12 @@ int helper(int start, int end, int target, int* array){
     return helper(start, mid-1, target, array);
     
 }
-*/
 int search(int* nums, int numsSize, int target){
-    //return helper(0,numsSize-1,target,nums);
-    
+    return helper(0,numsSize-1,target,nums);
+}
+*/
+//ITERATIVE VERSION
+int search(int* nums, int numsSize, int target){ 
     int start = 0, end = numsSize-1;
     int mid;
     
