@@ -6,12 +6,12 @@ bool isAnagram(char * s, char * t){
     int letter1, letter2, i = 0, j = 0, m = 0, n = 0;
     
     while (s[i] != '\0'){
-        letter1 = s[i] - 'a';
+        letter1 = s[i] - 97;
         array1[letter1]++;
         i++;
     }
     while (t[j] != '\0'){
-        letter2 = t[j] - 'a';
+        letter2 = t[j] - 97;
         array2[letter2]++;
         j++;
     }
