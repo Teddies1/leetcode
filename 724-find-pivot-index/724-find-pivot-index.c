@@ -12,15 +12,11 @@ int pivotIndex(int* nums, int numsSize){
         if (i == 0){
             leftsum = 0;
         }
-        else{
-            leftsum = sum(nums, 0, i);
-        }
         if (i == numsSize){
             rightsum = 0;
         }
-        else{
-            rightsum = sum(nums, i+1, numsSize);
-        }
+        rightsum = sum(nums, i+1, numsSize);
+        leftsum = sum(nums, 0, i);
         if (rightsum == leftsum){
             return i;
         }
