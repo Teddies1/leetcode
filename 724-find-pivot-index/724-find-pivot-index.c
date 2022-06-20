@@ -24,8 +24,6 @@ int pivotIndex(int* nums, int numsSize){
         if (rightsum == leftsum){
             return i;
         }
-        printf("%d ", leftsum);
-        printf("%d\n", rightsum);        
     }
     return -1;
 }
