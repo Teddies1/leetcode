@@ -61,7 +61,6 @@ bool trieStartsWith(Trie* obj, char *prefix) {
         return true;
     }
     return false;
-    //return trieSearch(obj, prefix);
 }
 
 void trieFree(Trie* obj) {
