@@ -51,7 +51,6 @@ bool trieStartsWith(Trie* obj, char *prefix) {
     int i = 0, letter;
     while(prefix[i] != '\0'){
         letter = prefix[i] - 'a';
-        printf("%d", letter);
         if (obj->alphabet[letter] == NULL){
             return false;
         }
