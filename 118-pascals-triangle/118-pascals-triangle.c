@@ -9,13 +9,15 @@ int** generate(int numRows, int* returnSize, int** returnColumnSizes){
     int i,j;
     
     *returnSize = numRows;
-    
-  
     int** array = (int**)malloc(sizeof(int*)* numRows);
      *returnColumnSizes = malloc(numRows*sizeof(int));
+    
+    
     for (i = 0; i < numRows; i++){
+        
         array[i] = (int*)malloc((i+1) * sizeof(int));
         (*returnColumnSizes)[i] = i+1;
+        
         for (j = 0; j <= i; j++){
             if (j == 0 || j == i){
                 array[i][j] = 1;
