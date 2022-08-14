@@ -7,30 +7,29 @@ class Solution {
             if (c == '(' || c == '[' || c == '{'){
                 stack.push(c);
             }
-           
-                switch(c){
-                    case ')': 
-                        if (stack.empty() || stack.pop() != '('){
-                            return false;
-                        }
-                        else{
-                            continue;
-                        }
-                    case ']': 
-                        if (stack.empty() || stack.pop() != '['){
-                            return false;
-                        }
-                        else{
-                            continue;
-                        }
-                    case '}': 
-                        if ( stack.empty() || stack.pop() != '{'){
-                            return false;
-                        }
-                        else{
-                            continue;
-                        }
-                }
+            switch(c){
+                case ')': 
+                    if (stack.empty() || stack.pop() != '('){
+                        return false;
+                       }
+                    else{
+                        continue;
+                    }
+                case ']': 
+                    if (stack.empty() || stack.pop() != '['){
+                        return false;
+                    }
+                    else{
+                        continue;
+                    }
+                case '}': 
+                    if ( stack.empty() || stack.pop() != '{'){
+                        return false;
+                    }
+                    else{
+                        continue;
+                    }
+            }
             
             
         }
