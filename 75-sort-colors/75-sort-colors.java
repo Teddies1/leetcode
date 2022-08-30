@@ -7,9 +7,6 @@ class Solution {
             colors[nums[i]]++;
         }
         for (int i = 0; i < 3; i++){
-            System.out.println(colors[i]);
-        }
-        for (int i = 0; i < 3; i++){
             while(colors[i] > 0){
                 nums[j++] = i;
                 colors[i]--;
