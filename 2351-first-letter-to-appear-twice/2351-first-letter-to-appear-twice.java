@@ -4,7 +4,7 @@ class Solution {
         char res = ' ';
         int count = 0;
         for (int i = 0; i < s.length(); i++){
-                if (hash.containsKey(s.charAt(i))){
+            if (hash.containsKey(s.charAt(i))){
                 res = s.charAt(i);
                 break;
             }
