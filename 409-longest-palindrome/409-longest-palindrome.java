@@ -4,7 +4,6 @@ class Solution {
         int count = 0;
         int flag = 0;
         int[] letter = new int[58];
-        
         for (int i = 0; i < s.length(); i++){
             int word = s.charAt(i) - 65;
             letter[word]++;
@@ -18,10 +17,7 @@ class Solution {
                 count += letter[i] - 1;
             }
         }
-        if (flag == 1){
-            count++;
-        }
-        return count;
+        return (flag == 1) ? ++count : count;
         
     }
 }
