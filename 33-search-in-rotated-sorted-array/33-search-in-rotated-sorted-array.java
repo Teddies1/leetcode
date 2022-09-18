@@ -1,14 +1,5 @@
 class Solution {
     public int search(int[] nums, int target) {
-        /*  the idea is that we have to find an point of decrease. 
-            then, the array before this point are the 'right' subarray
-            and the array after is the 'left' array.
-            
-            then the original 'midpoint' is the first element of the array.
-            after that perform binary search. if there is no point of decrease
-            then use binary search normally    
-        */
-        
         return helper(nums, 0, nums.length-1, target);
     }
     public int helper(int[] array, int start, int end, int target){
