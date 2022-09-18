@@ -17,7 +17,10 @@ class Solution {
                 count += letter[i] - 1;
             }
         }
-        return (flag == 1) ? ++count : count;
+        if (flag == 1){
+            count++;
+        }
+        return count;
         
     }
 }
