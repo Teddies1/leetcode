@@ -1,6 +1,5 @@
 class Solution {
     public int longestPalindrome(String s) {
-        s.toLowerCase();
         int count = 0;
         int flag = 0;
         int[] letter = new int[58];
@@ -21,6 +20,5 @@ class Solution {
             count++;
         }
         return count;
-        
     }
 }
