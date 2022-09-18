@@ -18,6 +18,16 @@ class Solution {
             if (target == array[mid]){
                 return mid;
             }
+            /*
+                if the mid value is greater than the first element, 
+                it means that the mid value is in the left sorted portion.
+                
+                then we check the target, if the target is smaller than the first element,
+                or greater than the mid value, then the answer is in the right half.
+                
+                else its in the left half
+            */
+                
             else if (array[start] <= array[mid]){
                 if (target < array[start] || target > array[mid]){
                     start = mid+1;
@@ -26,6 +36,15 @@ class Solution {
                     end = mid-1;
                 }
             }
+            /*
+                if the mid value is smaller than the last element,
+                it means the mid value is in the right sorted portion.
+                
+                if the target is larger than the last element, or is smaller than the mid value
+                then the answer is in the left half
+                
+                else its in the right half
+            */
             else{
                 if (target > array[end] || target < array[mid]){
                     end = mid-1;
