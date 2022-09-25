@@ -26,9 +26,6 @@ class Solution {
                 }
             }
         }
-        for (int i = 0; i < amount+1; i++){
-           System.out.println(dp[i]);
-        }
         return (dp[amount] > amount) ? -1 : dp[amount];
     }
 }
