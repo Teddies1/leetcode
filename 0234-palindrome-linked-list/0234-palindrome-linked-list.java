@@ -30,7 +30,6 @@ class Solution {
         ListNode fast = head;
         while(fast != null && fast.next != null){
             s.push(slow.val);
-            System.out.println(slow.val);
             fast = fast.next.next;
             slow = slow.next;
         }
@@ -38,7 +37,6 @@ class Solution {
             slow = slow.next;
         }
         while(slow != null){
-            System.out.println(slow.val);
             if (s.pop() != slow.val){
                 return false;
             }
