@@ -14,7 +14,6 @@ class Solution:
             else:
                 tmap[t[i]] += 1
         
-        print(smap, tmap)
         if smap == tmap: 
             return True
         return False
