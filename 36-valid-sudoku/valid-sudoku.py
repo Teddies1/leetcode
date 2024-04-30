@@ -1,10 +1,5 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        # for i in range(len(board)):
-        #     b = checkRow(board, i)
-        #     c = checkCol(board, i)
-        #     if not b or not c:
-        #         return False
 
         for i in range(len(board)):
             b = checkRow(board, i)
@@ -17,7 +12,6 @@ class Solution:
                     if not a:
                         return False
         return True
-        
     
 def checkRow(board, index):
     map = {}
@@ -31,7 +25,6 @@ def checkRow(board, index):
         if v > 1:
             return False
     return True
-
 
 def checkCol(board, index):
     map = {}
