@@ -1,14 +1,16 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
+        # for i in range(len(board)):
+        #     b = checkRow(board, i)
+        #     c = checkCol(board, i)
+        #     if not b or not c:
+        #         return False
+
         for i in range(len(board)):
             b = checkRow(board, i)
             c = checkCol(board, i)
             if not b or not c:
                 return False
-        # 0, 0 0, 3 0, 6
-        # 3, 0 3, 3 3, 6
-        # 6, 0 6, 3, 6, 6
-        for i in range(len(board)):
             for j in range(len(board[0])):
                 if i % 3 == 0 and j % 3 == 0:
                     a = checkBox(board, i , j)
@@ -16,7 +18,6 @@ class Solution:
                         return False
         return True
         
-    
     
 def checkRow(board, index):
     map = {}
