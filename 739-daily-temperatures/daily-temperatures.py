@@ -10,6 +10,12 @@ class Solution:
                 stack.pop()
             stack.append(i)
             
-            
-            
+        # ans = []
+        # for i in range(n):
+        #     for j in range(i+1, n):
+        #         if temperatures[j] > temperatures[i]:
+        #             ans[i] = (j-i)
+        #             break
+        # while len(ans) != n:
+        #     ans.append(0)
         return ans
