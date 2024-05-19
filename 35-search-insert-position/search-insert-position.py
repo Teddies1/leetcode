@@ -9,7 +9,6 @@ class Solution:
         
         while left <= right:
             mid = left + ((right - left) // 2)
-            print(mid)
             if target > nums[mid]:
                 left = mid + 1
             elif target <= nums[mid]:
