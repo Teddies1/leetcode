@@ -12,9 +12,7 @@ class Solution:
             nums.append(cur.val)
             cur = cur.next
         
-        nums.sort()
-        print(nums)
-        
+        nums.sort()        
         ans = ListNode()
         new = ans
         
