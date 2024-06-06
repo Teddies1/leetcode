@@ -28,7 +28,6 @@ class Solution:
                 if dict2[word] > 1:
                     dict2[word] -= 1
                 else:
-                    print("test")
                     dict2.pop(word)
              
             word = s2[right]
@@ -37,8 +36,5 @@ class Solution:
             else: 
                 dict2[word] += 1 
             left += 1
-            print(dict1, dict2)
-            
-        
         
         return dict1 == dict2
