@@ -1,7 +1,10 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        if not ransomNote or not magazine:
+        if not magazine:
             return False
+        if not ransomNote:
+            return True
+        
         note, mag = {}, {}
         for i in ransomNote:
             if i not in note:
