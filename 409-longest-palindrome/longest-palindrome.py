@@ -9,11 +9,11 @@ class Solution:
             else:
                 map[c] += 1
                 
-        for v in map.values():
-            if v % 2 == 0:
-                ans += v
-            elif v > 1:
-                ans += v-1
+        for k in map:
+            if map[k] % 2 == 0:
+                ans += map[k]
+            elif map[k] > 1:
+                ans += map[k]-1
                 flag = 1
             else: 
                 flag = 1
