@@ -10,7 +10,6 @@ class Solution:
                 map[c] += 1
                 
         for k, v in map.items():
-            print(k , v)
             if v % 2 == 0:
                 ans += v
             elif v > 1:
