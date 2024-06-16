@@ -1,5 +1,7 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        if not ransomNote or not magazine:
+            return False
         note, mag = {}, {}
         for i in ransomNote:
             if i not in note:
@@ -17,6 +19,5 @@ class Solution:
                 return False
             elif v > mag[k]:
                 return False
-        
         
         return True
