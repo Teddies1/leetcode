@@ -3,7 +3,7 @@
 
 class Solution:
     def firstBadVersion(self, n: int) -> int:
-        left, right = 0, n
+        left, right = 1, n
         while left <= right:
             mid = (right + left)//2
             ans = isBadVersion(mid)
