@@ -1,6 +1,6 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        if not magazine:
+        if not magazine or len(ransomNote) > len(magazine):
             return False
         if not ransomNote:
             return True
