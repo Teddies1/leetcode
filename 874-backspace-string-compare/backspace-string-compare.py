@@ -15,5 +15,5 @@ class Solution:
                     stack2.pop()
             else:
                 stack2.append(char)
-        print(stack1, stack2)
+                
         return stack1 == stack2
