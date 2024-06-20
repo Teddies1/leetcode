@@ -6,7 +6,7 @@ class Solution:
             while i < len(str) and i < len(curmax) and str[i] == curmax[i]:
                 i += 1
             if i == 0:
-                curmax = ""
+                return ""
             else:
                 curmax = curmax[:i]
         
