@@ -9,7 +9,5 @@ class Solution:
                 curmax = ""
             else:
                 curmax = curmax[:i]
-                print(curmax)
-        
         
         return curmax
