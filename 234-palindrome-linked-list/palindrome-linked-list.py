@@ -12,14 +12,12 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
             
-        print(fast)
         if fast != None:
             slow = slow.next
+            
         while slow != None:
             if len(stack) != 0 and slow.val != stack.pop():
                 return False
-            slow = slow.next
-        
-        
+            slow = slow.next        
         
         return True
