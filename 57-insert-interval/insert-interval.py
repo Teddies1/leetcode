@@ -1,6 +1,7 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
             ans = []
+            
             for interval in intervals:
                 if newInterval[0] > interval[1]:
                     ans.append(interval)
@@ -16,7 +17,7 @@ class Solution:
                         newInterval[1] = interval[1]
                         
             ans.append(newInterval)
-            print(newInterval)
+            
             for interval in intervals:
                 if interval[0] > newInterval[1]:
                     ans.append(interval)
