@@ -16,8 +16,8 @@ class Solution:
                 map2[word] = 1
                 
         for k, v in map1.items():
-            for k2, v2 in map2.items():
-                if k == k2 and v == v2 == 1:
+            if k in map2:
+                if v == map2[k] == 1:
                     ans += 1
                         
         return ans
