@@ -1,8 +1,3 @@
 class Solution:
     def minimizedStringLength(self, s: str) -> int:
-        stringset = set(s)
-        
-        
-        
-        
-        return len(stringset) if len(stringset) > 0 else ""
+        return len(set(s)) if len(set(s)) > 0 else ""
