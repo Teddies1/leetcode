@@ -19,9 +19,10 @@ class Solution:
 #         return ans
 
         ans = []
+    
         nums1.sort()
         nums2.sort()
-        print(nums1, nums2)
+        
         one, two = 0, 0
         while one < len(nums1) and two < len(nums2):
             if nums1[one] == nums2[two]:
@@ -33,10 +34,4 @@ class Solution:
             else:
                 one += 1
             
-        
-        
-        
-        
-        
-        
         return ans
