@@ -4,7 +4,6 @@ class Solution:
         n = len(sentencelist)
         m = len(searchWord)
         for i in range(n):
-            
             if searchWord == sentencelist[i][:m]:
                 return i+1
             
