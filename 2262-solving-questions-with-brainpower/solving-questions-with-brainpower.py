@@ -17,14 +17,9 @@ class Solution:
         score =  questions[index][0]
         brainpower = questions[index][1]
 
-        # if (index + brainpower + 1) < n and (index + 1) < n:
-        #     take_question = score + self.recurse(questions, cache, brainpower + index + 1)
-        #     skip_question = self.recurse(questions, cache, index + 1)
-            
-        #     cache[index] = max(take_question, skip_question)
-
-        #     return cache[index]
-        # else:
-        cache[index] = max(score + self.recurse(questions, cache, brainpower + index + 1), self.recurse(questions, cache, index + 1))
+        take_question = score + self.recurse(questions, cache, brainpower + index + 1)
+        skip_question = self.recurse(questions, cache, index + 1)
+        
+        cache[index] = max(take_question, skip_question)
 
         return cache[index]
