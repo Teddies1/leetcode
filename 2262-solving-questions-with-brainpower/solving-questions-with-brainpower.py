@@ -23,8 +23,8 @@ class Solution:
             
             cache[index] = max(take_question, skip_question)
 
-            return max(take_question, skip_question)
+            return cache[index]
         else:
             cache[index] = max(score, self.recurse(questions, cache, index+1))
 
-            return max(score, self.recurse(questions, cache, index + 1))
+            return cache[index]
