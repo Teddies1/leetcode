@@ -8,7 +8,6 @@ class Solution:
                 hashmap[num] = 1
         
         hashmap = dict(sorted(hashmap.items(), key=lambda x: x[1], reverse=True))
-        print((hashmap))
         ans = []
 
         for key, val in hashmap.items():
