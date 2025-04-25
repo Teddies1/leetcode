@@ -14,7 +14,6 @@ class Solution:
 
     def recurse(self, nums, index, ans, sub_array):
         if len(nums) <= index:
-            print(sub_array)
             ans.append(sub_array[:])
             return
 
