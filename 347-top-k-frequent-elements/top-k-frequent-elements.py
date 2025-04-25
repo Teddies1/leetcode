@@ -7,13 +7,22 @@ class Solution:
             else:
                 hashmap[num] = 1
         
-        hashmap = dict(sorted(hashmap.items(), key=lambda x: x[1], reverse=True))
-        ans = []
+        # hashmap = dict(sorted(hashmap.items(), key=lambda x: x[1], reverse=True))
+        # ans = []
 
-        for key, val in hashmap.items():
-            if k == 0:
-                return ans
+        # for key, val in hashmap.items():
+        #     if k == 0:
+        #         return ans
+        #     ans.append(key)
+        #     k -= 1
+
+        # return ans
+
+        heap = [(-value, key) for key, value in hashmap.items()]
+        heapq.heapify(heap)
+        ans = []
+        for _ in range(k):
+            value, key = heapq.heappop(heap)
             ans.append(key)
-            k -= 1
 
         return ans
