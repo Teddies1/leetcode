@@ -20,4 +20,4 @@ class Solution:
         sub_array.append(nums[index])
         self.recurse(nums, index+1, ans, sub_array)
         sub_array.pop()
-        self.recurse(nums, index+1, ans, sub_array)
+        self.recurse(nums, index+1, ans, sub_array) 
