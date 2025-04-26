@@ -23,6 +23,7 @@ class Solution:
     def recurse(self, candidates, index, ans, target, path, path_val):
         if path_val == target:
             ans.append(path[:])
+            return
         if path_val > target:
             return
 
