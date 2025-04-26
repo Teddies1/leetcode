@@ -16,21 +16,19 @@ class Solution:
     
         '''
         ans = []
-        
-        self.recurse(candidates, ans, target, [], 0, [])
+        self.recurse(candidates, 0, ans, target, [], 0)
 
         return ans
 
-    def recurse(self, candidates, ans, target, path, path_val, counter_array):
-        if path_val == target and not Counter(path) in counter_array:
-            counter_array.append(Counter(path))
+    def recurse(self, candidates, index, ans, target, path, path_val):
+        if path_val == target:
             ans.append(path[:])
         if path_val > target:
             return
 
-        for candidate in candidates:
-            path.append(candidate)
-            self.recurse(candidates, ans, target, path, path_val + candidate, counter_array)
+        for i in range(index, len(candidates)):
+            path.append(candidates[i])
+            self.recurse(candidates, i, ans, target, path, path_val + candidates[i])
             path.pop()
 
         
