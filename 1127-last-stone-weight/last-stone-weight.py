@@ -1,7 +1,5 @@
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
-        
-        
         for i, s in enumerate(stones):
             stones[i] = -s
         heapq.heapify(stones)    
@@ -11,9 +9,8 @@ class Solution:
                 return one
             two = -heapq.heappop(stones)
             if one != two:
-                new_stone = max(one, two) - min(one, two)
+                new_stone = abs(one-two)
                 heapq.heappush(stones, -new_stone)
-            print(stones)
         if len(stones) == 0:
             return 0
         return -stones[0]
