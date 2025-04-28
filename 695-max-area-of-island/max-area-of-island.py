@@ -8,7 +8,6 @@ class Solution:
             for j in range(m):
                 if grid[i][j] == 1:
                     area = self.recurse(grid, i, j)
-                    print(area)
                     max_area = max(area, max_area)
 
         return max_area
