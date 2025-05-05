@@ -15,9 +15,15 @@ class Solution:
             return 
         
         arr[row][col] = "0"
+
+        neighbours = [
+            (0, 1),
+            (-1, 0),
+            (1, 0),
+            (0, -1),
+        ]
+
+        for dx, dy in neighbours:
+            self.floodfill(arr, row + dx, col + dy)
         
-        self.floodfill(arr, row+1, col)
-        self.floodfill(arr, row, col-1)
-        self.floodfill(arr, row-1, col)
-        self.floodfill(arr, row, col+1)
         
