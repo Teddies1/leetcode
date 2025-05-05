@@ -6,7 +6,7 @@ class Solution:
             for j in range(len(grid[0])):
                 if grid[i][j] == "1":
                     ans += 1
-                self.floodfill(grid, i, j)
+                    self.floodfill(grid, i, j)
         
         return ans
     
