@@ -8,7 +8,7 @@ class Solution:
                 index_map[nums[i]].append(i)
             else:
                 index_map[nums[i]] = [i]
-        print(index_map)
+
         for key, v in index_map.items():
             for i in range(len(v)-1):
                 for j in range(i+1, len(v)):
