@@ -7,12 +7,12 @@ class Solution:
         for i in range(n):
             for j in range(m):
                 if grid[i][j] == 1:
-                    area = self.recurse(grid, i, j)
+                    area = self.recurse(grid, i, j, 1)
                     max_area = max(area, max_area)
 
         return max_area
 
-    def recurse(self, grid, row, col):
+    def recurse(self, grid, row, col, area):
         n = len(grid)
         m = len(grid[0])
 
@@ -29,12 +29,11 @@ class Solution:
             (1, 0),
             (-1, 0),
         ]
-        cumulative_area = 1
 
         for dx, dy in neighbours:
-            cumulative_area += self.recurse(grid, row + dx, col + dy)
+            area += self.recurse(grid, row + dx, col + dy, 1)
         
-        return cumulative_area
+        return area
     
     '''
     idea is to traverse entire grid
