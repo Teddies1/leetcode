@@ -1,32 +1,51 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         ans = [-1, -1]
+
         if target not in nums or not nums :
             return ans
         if len(nums) == 1:
             return [0, 0]
 
-        left = self.get_target(nums, target)
-        right = self.get_target(nums, target+1)-1
+        left = self.get_left(nums, target)
+        right = self.get_right(nums, target)
 
-        print(left, right)
         if left <= right:
             return [left, right]
         else:
             return [-1, -1]
-    def get_target(self, nums, target):
+
+    def get_left(self, nums, target):
         n = len(nums)
         left, right = 0, n-1
-        ans = n
+        left_index = n
         while left <= right:
             mid = left + (right - left) // 2
-            if nums[mid] >= target:
-                ans = mid
+            if nums[mid] == target:
+                left_index = mid
+                right = mid - 1
+            elif nums[mid] > target:
                 right = mid - 1
             else:
                 left = mid + 1
-        return ans
 
+        return left_index
+
+    def get_right(self, nums, target):
+        n = len(nums)
+        left, right = 0, n-1
+        right_index = n
+        while left <= right:
+            mid = left + (right - left) // 2
+            if nums[mid] == target:
+                right_index = mid
+                left = mid + 1
+            elif nums[mid] > target:
+                right = mid - 1
+            else:
+                left = mid + 1
+
+        return right_index
     '''
     [5,7,7,8,8,10], target = 8
 
