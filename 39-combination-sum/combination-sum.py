@@ -1,35 +1,28 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         '''
-        idea is we have a list of candidates
-        each time we choose a number, and then recursively choose the same number
-        at each recursion step, we check if the current path == target
-        if yes
-            append path to answer
-        if path > target
-            exceeded target, return and choose another path
+        idea is to maintain some value, and keep adding candidates until we meet or exceed target
+        if exceed, then remove candidates and try other candidates 
+
+        use backtracking + recursion to do this
         
-        for all elements in candidates
-            add this element to path
-            recurse
-            backtrack
-    
         '''
         ans = []
-        self.recurse(candidates, 0, ans, target, [], 0)
+        # perform recursion
+        def recurse(candidates, target, current_value, index, path, ans):
+            # index to keep track of which candidate we are processing
+            # base case, current_value > target, then return
+            if current_value > target:
+                return
+            if current_value == target:
+                ans.append(path[:])
+            n = len(candidates)
 
-        return ans
-
-    def recurse(self, candidates, index, ans, target, path, path_val):
-        if path_val == target:
-            ans.append(path[:])
-            return
-        if path_val > target:
-            return
-
-        for i in range(index, len(candidates)):
-            path.append(candidates[i])
-            self.recurse(candidates, i, ans, target, path, path_val + candidates[i])
-            path.pop()
-
+            # iterate through the candidates and add it to path
+            for i in range(index, n):
+                path.append(candidates[i])
+                recurse(candidates, target, current_value + candidates[i], i, path, ans)
+                path.pop()
         
+        recurse(candidates, target, 0, 0, [], ans)
+        return ans
