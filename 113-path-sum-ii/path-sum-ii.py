@@ -10,16 +10,16 @@ class Solution:
         if not root:
             return ans
 
-        self.recurse(root, targetSum, 0, [], ans)
+        self.recurse(root, targetSum, [], ans)
 
         return ans
 
-    def recurse(self, node, targetSum, currSum, path, ans):
+    def recurse(self, node, targetSum, path, ans):
         if not node:
             return
         
         if node.left == None and node.right == None:
-            currSum += node.val
+            currSum = sum(path) + node.val
             path.append(node.val)
             if currSum == targetSum:
                 ans.append(path[:])
@@ -30,6 +30,6 @@ class Solution:
                 return
 
         path.append(node.val)
-        self.recurse(node.left, targetSum, currSum + node.val, path, ans)
-        self.recurse(node.right, targetSum, currSum + node.val, path, ans)
+        self.recurse(node.left, targetSum, path, ans)
+        self.recurse(node.right, targetSum, path, ans)
         path.pop()
