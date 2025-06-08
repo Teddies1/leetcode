@@ -4,6 +4,7 @@ class Solution:
 
         for i in range(1, 10):
             self.dfs(i, n, ans)
+            
         return ans
 
     def dfs(self, number, target, ans):
