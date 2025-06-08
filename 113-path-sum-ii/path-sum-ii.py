@@ -22,7 +22,6 @@ class Solution:
             currSum += node.val
             path.append(node.val)
             if currSum == targetSum:
-                print(path, currSum)
                 ans.append(path[:])
                 path.pop()
                 return
