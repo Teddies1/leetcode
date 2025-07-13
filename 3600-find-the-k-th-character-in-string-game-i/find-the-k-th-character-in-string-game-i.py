@@ -5,7 +5,6 @@ class Solution:
         while len(word) < k:
             intermediate_word = self.operation(word)
             word += intermediate_word
-            print(word)
         return word[k-1]
 
     def operation(self, word: str) -> str:
