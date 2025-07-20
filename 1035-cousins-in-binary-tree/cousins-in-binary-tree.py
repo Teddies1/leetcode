@@ -13,7 +13,7 @@ class Solution:
         depth = 0
         queue.append(root)
         parent_map[root.val] = (None, depth) 
-        
+
         while queue:
             for i in range(len(queue)):
                 curr_node = queue.pop(0)
@@ -25,7 +25,7 @@ class Solution:
                     parent_map[curr_node.right.val] = (curr_node.val, depth+1)
 
             depth += 1
-        print(parent_map)
+            
         x_parent, x_depth = parent_map[x]
         y_parent, y_depth = parent_map[y]
 
