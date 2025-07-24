@@ -21,8 +21,7 @@ class Solution:
                 left += 1
                 max_freq = max(hashmap.values())
                 window_length = right - left + 1
-                
-            print(hashmap)
+
             max_length = max(max_length, right - left + 1)
 
         return max_length
