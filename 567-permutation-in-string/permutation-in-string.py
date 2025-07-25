@@ -11,7 +11,6 @@ class Solution:
             return False
 
         target_hash = 0
-        s1_freqmap = Counter(s1)
 
         for char in s1:
             hash_value = ord(char)
@@ -31,13 +30,3 @@ class Solution:
             left += 1
 
         return False
-
-    def is_permutation(self, left, right, s1_freqmap, s2):
-        s2_freqmap = {}
-        for i in range(left, right+1):
-            if s2[i] not in s2_freqmap:
-                s2_freqmap[s2[i]] = 1
-            else:
-                s2_freqmap[s2[i]] += 1
-
-        return s1_freqmap == s2_freqmap
