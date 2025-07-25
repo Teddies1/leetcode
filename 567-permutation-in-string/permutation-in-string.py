@@ -25,7 +25,7 @@ class Solution:
         for right in range(n-1, m):
             rolling_hash += ord(s2[right])
             if rolling_hash == target_hash:
-                if self.is_permutation(left, right, s1_freqmap, s2):
+                if sorted(s2[left:right+1]) == sorted(s1):
                     return True
             rolling_hash -= ord(s2[left])
             left += 1
