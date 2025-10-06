@@ -25,9 +25,10 @@ class Solution:
             (1, 0),
             (-1, 0),
         ]
+        
         rows = len(grid)
         cols = len(grid[0])
-        
+
         if 0 <= row < rows and 0 <= col < cols and grid[row][col] == "1":
             grid[row][col] = "0"
             for dx, dy in neighbours:
